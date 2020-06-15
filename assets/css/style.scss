@@ -4,6 +4,5 @@
 @import "{{ site.theme }}";
 
 .page-header {
-  background-color: black;
-  background-image: none;
+  background: black !important;
 }
