@@ -1,0 +1,177 @@
+html {
+  padding-bottom: 1rem;
+}
+
+body {
+  color: #f0efec;
+  background-color: #181a1b;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background: black;
+  text-align: center;
+  padding: 1rem 6rem;
+  color: white;
+  font-size: 16px;
+}
+
+.headerdiv {
+  background: black;
+  width: 100%;
+}
+
+.headertable {
+  text-align: center;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3.25rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  color: #ccc;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #777;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #777;
+  border-color: #303336;
+  color: black
+}
+
+.main-content {
+  max-width: 64rem; /* Change this for body width */
+  padding: 2rem 6rem;
+  margin: 0 auto;
+  font-size: 1.1rem ;
+  background-color: #181a1b;
+}
+
+.description {
+  text-align: center;
+}
+
+.tab {
+  float: left;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #1c1e1f;
+  width: 20%; /* Change this for tab width */
+  /* height: 300px; */
+}
+
+.tab button {
+  display: block;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+}
+
+.tab button:hover {
+  background-color: #222425;
+}
+
+.tab button.active {
+  background-color: #27292b;
+}
+
+.tabcontent {
+  float: left;
+  width: 70%;
+  display: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+}
+
+table .abouttable {
+  margin: 0 auto;
+}
+
+.abouttable td{
+  padding: 2rem;
+  text-align: center;
+}
+
+.bio-image {
+  height: 200px;
+  border-radius: 50%;
+  padding-bottom: 1rem;
+}
+
+#preload {
+  opacity: 0;
+
+  -webkit-transition: opacity 3s ease-in;
+     -moz-transition: opacity 3s ease-in;
+      -ms-transition: opacity 3s ease-in;
+       -o-transition: opacity 3s ease-in;
+          transition: opacity 3s ease-in;
+}
+
+#preload.load {
+  opacity: 1;
+}
+
+#content-desktop {
+  display: block;
+}
+
+#content-mobile {
+  display: none;
+}
+
+/* Mobile Stuff */
+@media screen and (max-width: 768px) {
+  #content-desktop {
+    display: none;
+  }
+
+  #content-mobile {
+    display: block;
+  }
+
+  .main-content {
+    max-width: 90%;
+    padding: 5% 5%;
+  }
+
+  .tab {
+    width: 100%;
+  }
+
+  .tab .tabback button {
+    display: none;
+  }
+
+  .tabcontent {
+    width: 90%;
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .abouttable {
+    text-align: center;
+    border-collapse: collapse;
+    margin: 0px auto;
+  }
+}
