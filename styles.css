@@ -71,6 +71,7 @@ h1 {
   background-color: #1c1e1f;
   width: 20%; /* Change this for tab width */
   /* height: 300px; */
+  border-radius: 0.3rem;
 }
 
 .tab button {
@@ -101,9 +102,16 @@ h1 {
   display: none;
   padding: 0.5rem 1rem;
   border: 1px solid #ccc;
+  border-radius: 0.3rem;
 }
 
-table .abouttable {
+.aboutdiv {
+  width: 100%;
+}
+
+.abouttable {
+  text-align: center;
+  border-collapse: collapse;
   margin: 0 auto;
 }
 
@@ -133,7 +141,7 @@ table .abouttable {
 }
 
 #content-desktop {
-  display: block;
+  display: '';
 }
 
 #content-mobile {

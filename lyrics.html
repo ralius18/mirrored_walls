@@ -733,7 +733,7 @@
         To find some meaning again<br>
       </p>
     </div>
-    <div class="tab" id="content-mobile">
+    <div class="tab tabback" id="content-mobile" style="border: none">
       <button class="tabback" onclick="closeSongMobile(event)" style="display: none;"><b>BACK</b></button>
     </div>
   </div>
@@ -781,6 +781,7 @@
     tabback = document.getElementsByClassName("tabback");
     for (i = 0; i < tabback.length; i++) {
       tabback[i].style.display = "block";
+      tabback[i].style.border = "1px solid #ccc";
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
@@ -808,6 +809,7 @@
     tabback = document.getElementsByClassName("tabback");
     for (i = 0; i < tabback.length; i++) {
       tabback[i].style.display = "none";
+      tabback[i].style.border = "none";
     }
 
   }
