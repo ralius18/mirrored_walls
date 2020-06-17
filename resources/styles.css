@@ -66,7 +66,7 @@ h1 {
   background-color: #181a1b;
 }
 
-.description {
+.center {
   text-align: center;
 }
 
@@ -126,10 +126,35 @@ h1 {
   text-align: center;
 }
 
+.showstable {
+  text-align: center;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.showstable th {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.showstable td {
+  text-align: center;
+  padding: 0.3rem 1rem;
+}
+
+.showstable tr:nth-child(even) {
+  background-color: #242627;
+}
+
 .bio-image {
   height: 200px;
   border-radius: 50%;
   padding-bottom: 1rem;
+}
+
+.listenimg {
+  max-width: 100px;
+  max-height: 100px;
 }
 
 #preload {
