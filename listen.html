@@ -45,7 +45,9 @@
             <a href="https://www.facebook.com/mirroredwalls"><img src="resources/facebook.svg" class="listenimg"></a>
           </td>
           <td>
-            <a href="https://www.instagram.com/mirrored_walls"><img src="resources/instagram.svg" class="listenimg"></a>
+            <a href="/#" onclick="openLink('instagram://user?username=mirrored', 'https://www.instagram.com/mirrored_walls')">
+              <img src="resources/instagram.svg" class="listenimg">
+            </a>
           </td>
         </tr>
       </table>
@@ -73,10 +75,23 @@
             <a href="https://www.facebook.com/mirroredwalls"><img src="resources/facebook.svg" height="50 px"></a>
           </td>
           <td>
-            <a href="https://www.instagram.com/mirrored_walls"><img src="resources/instagram.svg" height="50 px"></a>
+            <a href="/#" onclick="openLink('instagram://user?username=mirrored', 'https://www.instagram.com/mirrored_walls')">
+              <img src="resources/instagram.svg" height="50 px">
+            </a>
           </td>
         </tr>
       </table>
     </div>
   </div>
 </body>
+
+<script>
+  function openLink(app, web) {
+    var appWindow = window.open(app, '_blank')
+    setTimeout( function () {
+      if (appWindow) {
+        appWindow.location = web
+      }
+    }, 1)
+  }
+</script>
