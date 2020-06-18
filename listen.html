@@ -25,68 +25,55 @@
   </div>
   <div class="main-content">
     <div id="content-desktop">
+      <div class="videowrapper">
+        <iframe src="https://youtube.com/embed/KNizuSPjvXc" class="center"></iframe>
+      </div>
+      <br><br><br>
+      <div class="videowrapper">
+        <iframe src="https://youtube.com/embed/iWjscWLx7PU"></iframe>
+      </div>
+    </div>
+    <div id="content-mobile">
+      <div class="videowrapper">
+        <iframe src="https://youtube.com/embed/KNizuSPjvXc" class="center"></iframe>
+      </div>
+      <br><br><br>
+      <div class="videowrapper">
+        <iframe src="https://youtube.com/embed/iWjscWLx7PU"></iframe>
+      </div>
+    </div>
+    <br><br><br>
+    <div class="footer" id="footer">
       <table class="abouttable">
         <tr>
           <td>
-            <a href="https://play.spotify.com"><img src="resources/spotify.svg" class="listenimg"></a>
+            <a href="https://play.spotify.com">
+              <img src="resources/spotify.svg" class="footerimg">
+            </a>
           </td>
           <td>
-            <a href="https://music.apple.com"><img src="resources/itunes.svg" class="listenimg"></a>
+            <a href="https://music.apple.com">
+              <img src="resources/itunes.svg" class="footerimg">
+            </a>
           </td>
           <td>
-            <a href="https://music.youtube.com"><img src="resources/ytmusic.svg" class="listenimg"></a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a href="https://www.youtube.com/channel/UC_xz1y12Qm8OPqAYkrD34Mg"><img src="resources/youtube.svg" class="listenimg" width="100px"></a>
+            <a href="https://music.youtube.com">
+              <img src="resources/ytmusic.svg" class="footerimg" width="30px">
+            </a>
           </td>
           <td>
-            <a href="https://www.facebook.com/mirroredwalls"><img src="resources/facebook.svg" class="listenimg"></a>
+            <a href="https://www.youtube.com/channel/UC_xz1y12Qm8OPqAYkrD34Mg">
+              <img src="resources/youtube.svg" class="footerimg">
+            </a>
+          </td>
+          <td>
+            <a href="https://www.facebook.com/mirroredwalls">
+              <img src="resources/facebook.svg" class="footerimg">
+            </a>
           </td>
           <td>
             <a href="https://www.instagram.com/mirrored_walls">
-              <img src="resources/instagram.svg" class="listenimg">
-            </a>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <div id="content-mobile">
-      <table class="abouttable">
-        <tr>
-          <td>
-            <a href="#" onclick="openLink('spotify')">
-              <img src="resources/spotify.svg" height="50 px">
-            </a>
-          </td>
-          <td>
-            <a href="#" onclick="openLink('itunes')">
-              <img src="resources/itunes.svg" height="50 px">
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a href="#" onclick="openLink('ytmusic')">
-              <img src="resources/ytmusic.svg" height="50 px">
-            </a>
-          </td>
-          <td>
-            <a href="#" onclick="openLink('youtube')">
-              <img src="resources/youtube.svg" width="50 px">
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a href="#" onclick="openLink('facebook')">
-              <img src="resources/facebook.svg" height="50 px">
-            </a>
-          </td>
-          <td>
-            <a href="#" onclick="openLink('instagram')">
-              <img src="resources/instagram.svg" height="50 px">
+              <img src="resources/instagram.svg" class="footerimg">
             </a>
           </td>
         </tr>
@@ -94,49 +81,3 @@
     </div>
   </div>
 </body>
-
-<script>
-  function openLink(type) {
-    var isIos = navigator.platform.match(/iPhone|iPod|iPad/),
-       appWindow,
-       app,
-       web
-
-    switch (type) {
-      case 'spotify':
-        app = isIos ? 'spotify://artist/12345' : 'intent://artist/12345#Intent;package=com.spotify.music;scheme=spotify;end'
-        web = 'https://open.spotify.com/artist/12345'
-        break;
-      case 'itunes':
-        app = isIos ? 'music://music.apple.com/us/artist/12345' : 'intent://music.apple.com/us/artist/12345//#Intent;package=com.apple.android.music;scheme=https;end'
-        web = 'https://music.apple.com/us/artist/12345'
-        break;
-      case 'ytmusic':
-        app = 'intent://music.youtube.com/channel/12345#Intent;package=com.google.android.apps.youtube.music;scheme=https;end'
-        web = 'https://music.youtube.com'
-        break;
-      case 'youtube':
-        app = isIos ? 'vnd.youtube://user/UC_xz1y12Qm8OPqAYkrD34Mg' : 'intent://www.youtube.com/channel/UC_xz1y12Qm8OPqAYkrD34Mg#Intent;package=com.google.android.youtube;scheme=https;end'
-        web = 'https://www.youtube.com/channel/UC_xz1y12Qm8OPqAYkrD34Mg'
-        break;
-      case 'facebook':
-        app = isIos ? 'fb://page/?id=2034295306849240' : 'intent://page/2034295306849240?referrer=app_link#Intent;package=com.facebook.katana;scheme=fb;end'
-        web = 'https://www.facebook.com/mirroredwalls'
-        break;
-      case 'instagram':
-        app = isIos ? 'instagram://user?username=mirrored_walls' : 'intent://instagram.com/_u/mirrored_walls/#Intent;package=com.instagram.android;scheme=https;end'
-        web = 'https://www.instagram.com/mirrored_walls' 
-        break;
-      default:
-        break;
-    }
-
-    appWindow = window.open(app, '_blank')
-
-    setTimeout(function () {
-      if (appWindow) {
-        appWindow.location = web
-      }
-    }, 1)
-  }
-</script>
