@@ -47,7 +47,7 @@ header {
   text-align: center;
   border-collapse: collapse;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .fit {
@@ -272,5 +272,13 @@ iframe {
   .videowrapper {
     width: 100%;
     height: 100%;
+  }
+  
+  .footertable td {
+    padding: 1rem;
+  }
+
+  .footerimg {
+    width: 1.2rem;
   }
 }
