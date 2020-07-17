@@ -86,5 +86,8 @@
 </body>
 
 <script>
-  document.getElementById("preload").className += " load";
+  // Wait for css to load first
+  setTimeout(function () {
+    document.getElementById("preload").className += " load";
+  }, 1000)
 </script>
