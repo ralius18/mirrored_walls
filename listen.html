@@ -25,24 +25,62 @@
     <h1><img src="resources/mw-white-cropped.png" height="200px"></h1>
   </header>
   <div class="headerdiv">
-    <table class="headertable">
-      <tr>
-        <td><a class="btn" href="about.html">About</a></td>
-        <td><a class="btn" href="listen.html">Listen</a></td>
-        <td><a class="btn" href="shows.html">Shows</a></td>
-        <td><a class="btn" href="lyrics.html">Lyrics</a></td>
-      </tr>
-    </table>
+    <div id="content-mobile">
+      <table class="headertable">
+        <tr>
+          <td><a class="btn" href="about.html">About</a></td>
+          <td><a class="btn" href="listen.html">Listen</a></td>
+          <td><a class="btn active" href="shows.html">Shows</a></td>
+        </tr>
+      </table>
+      <table class="headertable">
+        <tr>
+          <td><a class="btn" href="lyrics.html">Lyrics</a></td>
+          <td><a class="btn" href="merch.html">Merch</a></td>
+        </tr>
+      </table>
+    </div>
+    <div id="content-desktop">
+      <table class="headertable">
+        <tr>
+          <td><a class="btn" href="about.html">About</a></td>
+          <td><a class="btn" href="listen.html">Listen</a></td>
+          <td><a class="btn active" href="shows.html">Shows</a></td>
+          <td><a class="btn" href="lyrics.html">Lyrics</a></td>
+          <td><a class="btn" href="merch.html">Merch</a></td>
+        </tr>
+      </table>
+    </div>
   </div>
   <div class="main-content">
     <div id="content-desktop">
       <div class="center">
-        <h3>Inconvenience</h3>
-        <h4>Out now!</h4>
-        <img src="resources/inconvenience.png" width="300px" height="300px" style="border-radius: 5px; border: 1px solid white">
-        <br>
-        <br>
-          <iframe src="https://open.spotify.com/embed/album/3zUJexvHW0Ec4k7uwokpJk" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <table class="albums-table">
+          <tr>
+            <td><h3>Inconvenience</h3></td>
+            <td><h3>These Versions May Vanish<br>If We Record Them In Studio.<br>But For Now, Here's Some Music (Live)</h3></td>
+          </tr>
+          <tr>
+            <td style="padding-bottom: 50px;">
+              <a href="https://open.spotify.com/album/3zUJexvHW0Ec4k7uwokpJk">
+                <img class="album-img" src="resources/inconvenience.png" width="300px" height="300px">
+              </a>
+            </td>
+            <td style="padding-bottom: 50px;">
+              <a href="https://open.spotify.com/album/4Ztmg6XikrrwdZkvQAcay0">
+                <img class="album-img" src="resources/vanish.jpg" width="300px" height="300px">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <iframe src="https://open.spotify.com/embed/album/3zUJexvHW0Ec4k7uwokpJk" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </td>
+            <td>
+              <iframe src="https://open.spotify.com/embed/album/4Ztmg6XikrrwdZkvQAcay0" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </td>
+          </tr>
+        </table>
         <br>
         <br>
         <div class="videowrapper">
@@ -53,12 +91,17 @@
     <div id="content-mobile">
       <div class="center">
         <h3>Inconvenience</h3>
-        <h4>Out now!</h4>
         <img src="resources/inconvenience.png" width="300px" height="300px" style="border-radius: 5px; border: 1px solid white">
         <br>
         <br>
         <iframe src="https://open.spotify.com/embed/album/3zUJexvHW0Ec4k7uwokpJk" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         
+        <br>
+        <h3>These Versions May Vanish<br>If We Record Them In Studio.<br>But For Now, Here's Some Music (Live)</h3>
+        <img class="album-img" src="resources/vanish.png" width="300px" height="300px">
+        <br>
+        <br>
+        <iframe src="https://open.spotify.com/embed/album/4Ztmg6XikrrwdZkvQAcay0" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         <br>
         <br>
         <div class="videowrapper">
