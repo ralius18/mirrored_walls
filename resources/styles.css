@@ -305,3 +305,8 @@ a:visited {
   border-color: white;
   color: black
 }
+
+#about-info{
+  max-width: 500px;
+  margin: 0 auto;
+}
