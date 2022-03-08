@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'RobotoCondensed';
+  src: url('fonts/RobotoCondensed-Regular.ttf');
+}
+@font-face {
+  font-family: 'RobotoCondensed';
+  font-weight: bold;
+  src: url('fonts/RobotoCondensed-Bold.ttf');
+}
+
 html {
   padding-bottom: 1rem;
   scrollbar-width: thin;
@@ -12,16 +22,21 @@ body {
   background-position: center top;
   font-size: 16px;
   line-height: 1.5;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'RobotoCondensed', Arial, Helvetica, sans-serif;
   position: relative;
   overflow: overlay;
 }
 
 header {
   text-align: center;
-  padding: 1rem 6rem;
+  padding: 1rem 0;
   color: white;
   font-size: 16px;
+}
+
+header img {
+  max-width: 100%;
+  max-height: 100px;
 }
 
 .footerimg {
@@ -57,7 +72,7 @@ header {
 
 .fit {
   max-width: 100%;
-  max-height: 50vh;
+  max-height: 40vh;
   margin: auto;
 }
 
@@ -81,6 +96,7 @@ header {
   display: inline-block;
   padding: 0.75rem 2rem;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .headertable td:hover {
@@ -134,7 +150,7 @@ h1 {
   width: 20%; /* Change this for tab width */
 }
 
-.tab button {
+.tab .button {
   display: block;
   background-color: inherit;
   float: left;
@@ -146,14 +162,15 @@ h1 {
   color: white;
   font-weight: bold;
   width: 100%;
+  max-width: calc(100% - 32px);
 }
 
-.tab button:hover {
+.tab .button:hover {
   background-color: white;
   color: black;
 }
 
-.tab button.active {
+.tab .button.active {
   background-color: white;
   color: black;
 }
@@ -255,14 +272,21 @@ h1 {
     width: 100%;
   }
 
-  .tab .tabback button {
+  .tab .tabback.button {
     display: none;
+    border: none;
+  }
+
+  .tab.top {
+    border-bottom: none;
+  }
+
+  .tab.bottom {
+    border-top: none;
   }
 
   .tabcontent {
     width: 90%;
-    border-top: none;
-    border-bottom: none;
   }
 
   .abouttable {

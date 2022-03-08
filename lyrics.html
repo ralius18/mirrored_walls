@@ -21,7 +21,7 @@
 
 <body>
   <header role="banner">
-    <h1><img src="resources/mw-text.svg" height="100px"></h1>
+    <h1><img src="resources/mw-text.svg"></h1>
   </header>
   <div class="headerdiv">
     <div id="content-mobile">
@@ -53,48 +53,50 @@
   </div>
   <div class="main-content">
     <div class="tab" id="content-desktop">
-      <button id="tablink-castles"            class="tablinks" onclick="openSong('castles')">Castles</button>
-      <button id="tablink-collapse"           class="tablinks" onclick="openSong('collapse')">Collapse</button>
-      <button id="tablink-eyelids"            class="tablinks" onclick="openSong('eyelids')">Eyelids</button>
-      <button id="tablink-forgotten_oath"     class="tablinks" onclick="openSong('forgotten_oath')">Forgotten Oath</button>
-      <button id="tablink-from_my_chest"      class="tablinks" onclick="openSong('from_my_chest')">From My Chest</button>
-      <button id="tablink-ghost"              class="tablinks" onclick="openSong('ghost')">Ghost</button>
-      <button id="tablink-hurting_you"        class="tablinks" onclick="openSong('hurting_you')">Hurting You (By Hurting Me)</button>
-      <button id="tablink-icarus"             class="tablinks" onclick="openSong('icarus')">Icarus</button>
-      <button id="tablink-internal"           class="tablinks" onclick="openSong('internal')">Internal</button>
-<!--      <button id="tablink-It"                class="tablinks" onclick="openSong(event, 'It\'ll Be Okay')">It'll Be Okay</button> -->
-      <button id="tablink-ivory"              class="tablinks" onclick="openSong('ivory_walls')">Ivory Walls</button>
-      <button id="tablink-lately"             class="tablinks" onclick="openSong('lately')">Lately</button>
-      <button id="tablink-losing_sheep"       class="tablinks" onclick="openSong('losing_sheep')">Losing Sheep</button>
-      <button id="tablink-masquerade"         class="tablinks" onclick="openSong('masquerade')">Masquerade</button>
-      <button id="tablink-monster"            class="tablinks" onclick="openSong('monster')">Monster</button>
-      <button id="tablink-open_hand"          class="tablinks" onclick="openSong('open_hand')">Open Hand</button>
-      <button id="tablink-to_go_from_here"    class="tablinks" onclick="openSong('to_go_from_here')">To Go From Here</button>
-      <button id="tablink-viertame_otro_tiro" class="tablinks" onclick="openSong('viertame_otro_tiro')">Viertame Otro Tiro (Pour Me Another Shot)</button>
-      <button id="tablink-yang"               class="tablinks" onclick="openSong('yang')">Yang</button>
-      <button id="tablink-yin"                class="tablinks" onclick="openSong('yin')">Yin</button>
+      <div id="tablink-castles"            class="button tablinks" onclick="openSong('castles')">Castles</div>
+      <div id="tablink-collapse"           class="button tablinks" onclick="openSong('collapse')">Collapse</div>
+      <div id="tablink-eyelids"            class="button tablinks" onclick="openSong('eyelids')">Eyelids</div>
+      <div id="tablink-forgotten_oath"     class="button tablinks" onclick="openSong('forgotten_oath')">Forgotten Oath</div>
+      <div id="tablink-from_my_chest"      class="button tablinks" onclick="openSong('from_my_chest')">From My Chest</div>
+      <div id="tablink-ghost"              class="button tablinks" onclick="openSong('ghost')">Ghost</div>
+      <div id="tablink-hurting_you"        class="button tablinks" onclick="openSong('hurting_you')">Hurting You (By Hurting Me)</div>
+      <div id="tablink-icarus"             class="button tablinks" onclick="openSong('icarus')">Icarus</div>
+      <div id="tablink-internal"           class="button tablinks" onclick="openSong('internal')">Internal</div>
+<!--      <div id="tablink-okay"                class="button tablinks" onclick="openSong(event, 'okay')">It'll Be Okay</div> -->
+      <div id="tablink-ivory"              class="button tablinks" onclick="openSong('ivory_walls')">Ivory Walls</div>
+      <div id="tablink-lately"             class="button tablinks" onclick="openSong('lately')">Lately</div>
+      <div id="tablink-losing_sheep"       class="button tablinks" onclick="openSong('losing_sheep')">Losing Sheep</div>
+      <div id="tablink-masquerade"         class="button tablinks" onclick="openSong('masquerade')">Masquerade</div>
+      <div id="tablink-monster"            class="button tablinks" onclick="openSong('monster')">Monster</div>
+      <div id="tablink-open_hand"          class="button tablinks" onclick="openSong('open_hand')">Open Hand</div>
+      <div id="tablink-to_go_from_here"    class="button tablinks" onclick="openSong('to_go_from_here')">To Go From Here</div>
+      <div id="tablink-viertame_otro_tiro" class="button tablinks" onclick="openSong('viertame_otro_tiro')">Viertame Otro Tiro (Pour Me Another Shot)</div>
+      <div id="tablink-yang"               class="button tablinks" onclick="openSong('yang')">Yang</div>
+      <div id="tablink-yin"                class="button tablinks" onclick="openSong('yin')">Yin</div>
+    </div>
+    <div class="tab tabback top" id="content-mobile">
+      <div class="button" onclick="closeSongMobile()"><b>BACK</b></div>
     </div>
     <div class="tab" id="content-mobile">
-      <button class="tabback" onclick="closeSongMobile()" style="display: none;"><b>BACK</b></button>
-      <button id="tablinkmobile-castles"            class="tablinksmobile" onclick="openSongMobile('castles')">Castles</button>
-      <button id="tablinkmobile-collapse"           class="tablinksmobile" onclick="openSongMobile('collapse')">Collapse</button>
-      <button id="tablinkmobile-eyelids"            class="tablinksmobile" onclick="openSongMobile('eyelids')">Eyelids</button>
-      <button id="tablinkmobile-forgotten_oath"     class="tablinksmobile" onclick="openSongMobile('forgotten_oath')">Forgotten Oath</button>
-      <button id="tablinkmobile-from_my_chest"      class="tablinksmobile" onclick="openSongMobile('from_my_chest')">From My Chest</button>
-      <button id="tablinkmobile-ghost"              class="tablinksmobile" onclick="openSongMobile('ghost')">Ghost</button>
-      <button id="tablinkmobile-hurting_you"        class="tablinksmobile" onclick="openSongMobile('hurting_you')">Hurting You (By Hurting Me)</button>
-      <button id="tablinkmobile-icarus"             class="tablinksmobile" onclick="openSongMobile('icarus')">Icarus</button>
-      <button id="tablinkmobile-internal"           class="tablinksmobile" onclick="openSongMobile('internal')">Internal</button>
-      <button id="tablinkmobile-ivory"              class="tablinksmobile" onclick="openSongMobile('ivory_walls')">Ivory Walls</button>
-      <button id="tablinkmobile-lately"             class="tablinksmobile" onclick="openSongMobile('lately')">Lately</button>
-      <button id="tablinkmobile-losing_sheep"       class="tablinksmobile" onclick="openSongMobile('losing_sheep')">Losing Sheep</button>
-      <button id="tablinkmobile-masquerade"         class="tablinksmobile" onclick="openSongMobile('masquerade')">Masquerade</button>
-      <button id="tablinkmobile-monster"            class="tablinksmobile" onclick="openSongMobile('monster')">Monster</button>
-      <button id="tablinkmobile-open_hand"          class="tablinksmobile" onclick="openSongMobile('open_hand')">Open Hand</button>
-      <button id="tablinkmobile-to_go_from_here"    class="tablinksmobile" onclick="openSongMobile('to_go_from_here')">To Go From Here</button>
-      <button id="tablinkmobile-viertame_otro_tiro" class="tablinksmobile" onclick="openSongMobile('viertame_otro_tiro')">Viertame Otro Tiro (Pour Me Another Shot)</button>
-      <button id="tablinkmobile-yang"               class="tablinksmobile" onclick="openSongMobile('yang')">Yang</button>
-      <button id="tablinkmobile-yin"                class="tablinksmobile" onclick="openSongMobile('yin')">Yin</button>
+      <div id="tablinkmobile-castles"            class="button tablinksmobile" onclick="openSongMobile('castles')">Castles</div>
+      <div id="tablinkmobile-collapse"           class="button tablinksmobile" onclick="openSongMobile('collapse')">Collapse</div>
+      <div id="tablinkmobile-eyelids"            class="button tablinksmobile" onclick="openSongMobile('eyelids')">Eyelids</div>
+      <div id="tablinkmobile-forgotten_oath"     class="button tablinksmobile" onclick="openSongMobile('forgotten_oath')">Forgotten Oath</div>
+      <div id="tablinkmobile-from_my_chest"      class="button tablinksmobile" onclick="openSongMobile('from_my_chest')">From My Chest</div>
+      <div id="tablinkmobile-ghost"              class="button tablinksmobile" onclick="openSongMobile('ghost')">Ghost</div>
+      <div id="tablinkmobile-hurting_you"        class="button tablinksmobile" onclick="openSongMobile('hurting_you')">Hurting You (By Hurting Me)</div>
+      <div id="tablinkmobile-icarus"             class="button tablinksmobile" onclick="openSongMobile('icarus')">Icarus</div>
+      <div id="tablinkmobile-internal"           class="button tablinksmobile" onclick="openSongMobile('internal')">Internal</div>
+      <div id="tablinkmobile-ivory"              class="button tablinksmobile" onclick="openSongMobile('ivory_walls')">Ivory Walls</div>
+      <div id="tablinkmobile-lately"             class="button tablinksmobile" onclick="openSongMobile('lately')">Lately</div>
+      <div id="tablinkmobile-losing_sheep"       class="button tablinksmobile" onclick="openSongMobile('losing_sheep')">Losing Sheep</div>
+      <div id="tablinkmobile-masquerade"         class="button tablinksmobile" onclick="openSongMobile('masquerade')">Masquerade</div>
+      <div id="tablinkmobile-monster"            class="button tablinksmobile" onclick="openSongMobile('monster')">Monster</div>
+      <div id="tablinkmobile-open_hand"          class="button tablinksmobile" onclick="openSongMobile('open_hand')">Open Hand</div>
+      <div id="tablinkmobile-to_go_from_here"    class="button tablinksmobile" onclick="openSongMobile('to_go_from_here')">To Go From Here</div>
+      <div id="tablinkmobile-viertame_otro_tiro" class="button tablinksmobile" onclick="openSongMobile('viertame_otro_tiro')">Viertame Otro Tiro (Pour Me Another Shot)</div>
+      <div id="tablinkmobile-yang"               class="button tablinksmobile" onclick="openSongMobile('yang')">Yang</div>
+      <div id="tablinkmobile-yin"                class="button tablinksmobile" onclick="openSongMobile('yin')">Yin</div>
     </div>
     <div id="castles" class="tabcontent">
       <h3>Castles</h3>
@@ -198,8 +200,8 @@
         Memory is all that's left of you because I<br>
         Made it a rule to break and burn everything left behind<br>
         <br>
-        Woah-oh-oh-oh-oh-oh
-        Woah-oh-oh-oh-oh-oh
+        Woah-oh-oh-oh-oh-oh<br>
+        Woah-oh-oh-oh-oh-oh<br>
         <br>
         What does it mean when I still want you?<br>
         (What does it mean when I still want you?)<br>
@@ -451,9 +453,9 @@
         Or will I see what's in my mind, an endless night<br>
         Following voices as my guide<br>
         <br>
-        Before I know I'm underneath it all
-        The shadow's lost control, I cannot speak at all
-        I'm building up my walls to hide behind a smile
+        Before I know I'm underneath it all<br>
+        The shadow's lost control, I cannot speak at all<br>
+        I'm building up my walls to hide behind a smile<br>
         I'm choking up inside while the world watches me breathe<br>
       </p>
     </div>
@@ -843,8 +845,8 @@
         To find some meaning again<br>
       </p>
     </div>
-    <div class="tab tabback" id="content-mobile" style="border: none">
-      <button class="tabback" onclick="closeSongMobile()" style="display: none;"><b>BACK</b></button>
+    <div class="tab tabback bottom" id="content-mobile">
+      <div class="tab button" onclick="closeSongMobile()"><b>BACK</b></div>
     </div>
   </div>
   <div class="footer" id="footer">
@@ -942,7 +944,7 @@
     tabback = document.getElementsByClassName("tabback");
     for (i = 0; i < tabback.length; i++) {
       tabback[i].style.display = "block";
-      tabback[i].style.border = "1px solid #ccc";
+      tabback[i].style.border = "2px solid white";
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
