@@ -77,7 +77,7 @@
     <div class="tab tabback top" id="content-mobile" style="display: none">
       <div class="button" onclick="closeSongMobile()"><b>BACK</b></div>
     </div>
-    <div class="tab" id="content-mobile">
+    <div class="tab tab-menu-mobile" id="content-mobile">
       <div id="tablinkmobile-castles"            class="button tablinksmobile" onclick="openSongMobile('castles')">Castles</div>
       <div id="tablinkmobile-collapse"           class="button tablinksmobile" onclick="openSongMobile('collapse')">Collapse</div>
       <div id="tablinkmobile-eyelids"            class="button tablinksmobile" onclick="openSongMobile('eyelids')">Eyelids</div>
@@ -269,7 +269,7 @@
         Watch this bloom<br>
         A home that's built to last<br>
         We'll lay it stone by stone<br>
-        Don’t leave me alone<br>
+        Don't leave me alone<br>
         <br>
         If your blood boils black<br>
         I'll transfuse you some colour<br>
@@ -286,8 +286,8 @@
         If your blood boils black<br>
         I'll transfuse you some colour<br>
         From my chest to your chest<br>
-        You’re the best, thing I've ever known<br>
-        And I’ll hold you through it all<br>
+        You're the best, thing I've ever known<br>
+        And I'll hold you through it all<br>
         Even if your blood boils black<br>
         <br>
         No ashes (You're the best)<br>
@@ -934,11 +934,16 @@
       tabcontent[i].style.display = "none";
     }
 
-    // Get all elements with class="tablinks" and remove the class "active" and hide them
+    // Get all elements with class="tablinks" and remove the class "active"
     tablinks = document.getElementsByClassName("tablinksmobile");
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
-      tablinks[i].style.display = "none";
+    }
+
+    // Get tab menu and hide it
+    tabmenu = document.getElementsByClassName("tab-menu-mobile");
+    for (i = 0; i < tabmenu.length; i++) {
+      tabmenu[i].style.display = "none";
     }
 
     tabback = document.getElementsByClassName("tabback");
@@ -967,7 +972,12 @@
     tablinks = document.getElementsByClassName("tablinksmobile");
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
-      tablinks[i].style.display = "block";
+    }
+
+    // Get tab menu and show it
+    tabmenu = document.getElementsByClassName("tab-menu-mobile");
+    for (i = 0; i < tabmenu.length; i++) {
+      tabmenu[i].style.display = "block";
     }
 
     tabback = document.getElementsByClassName("tabback");
@@ -999,7 +1009,7 @@
   if (window.location.hash) {
     var hash = window.location.hash.substr(1);
     if (document.getElementById(hash))
-      if (isMobile) {
+      if (isMobile()) {
         openSongMobile(hash)
       } else {
         openSong(hash)
